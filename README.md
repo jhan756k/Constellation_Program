@@ -1,10 +1,8 @@
 Constellation Memorization Program
 ==
-**주의사항**
+**실행방법**
 
-Constellation.py 실행
-
-이때 Constellation.py는 Constellation.xlsx와 같은 파일 디렉토리에 위치해야 함.
+Constellation.exe 파일 하나만 다운로드 후 실행
 
 사용방법
 ===
