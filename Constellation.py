@@ -139,7 +139,7 @@ class Ui_MainWindow(object):
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(819, 485)
+        MainWindow.resize(819, 450)
         font = QtGui.QFont()
         font.setFamily("NanumGothic")
         font.setPointSize(20)
