@@ -1,5 +1,5 @@
 from openpyxl import load_workbook
-import random, time
+import random
 load_wb = load_workbook("Constellation.xlsx", data_only=True)
 constellations = load_wb['시트1']
 qtype = ("한국어명 Constellation Abbreviation Alpha Beta Gamma").split()
@@ -38,7 +38,7 @@ for south in range(34):
     for x in range(6):
         south_const[south][x] = constellations.cell(row=south+83, column=x+1).value
 
-print("spring 1, summer 2, autumn 3, winter 4, north 5, south 6 고르셈")
+print("spring 1, summer 2, autumn 3, winter 4, north 5, south 6 중 고르세요")
 
 getuse = list(map(int, input().split()))
 uselist = []
@@ -47,6 +47,9 @@ for x in range(1, 7):
     if x in getuse:
         uselist.extend(total_const[x-1])
         rmax += const_len[x-1]
+print()
+print("멈추고 싶으면 stop 이라고 치세요")
+print()
 
 while True:
     r = random.randint(0, rmax-1)
@@ -67,25 +70,3 @@ while True:
     else:
         print("틀렸습니다.")
         print(f"정답은 {uselist[r][anstype]} 입니다.", end = "\n\n")
-    
-'''
-while True:
-    r = random.randint(0, 11)
-    anstype = random.randint(1, 5)
-
-    if (spring_const[r][anstype] == None) or (spring_const[r][anstype] == " ") or ("-"):
-        continue
-
-    print(f"{spring_const[r][0]} 의 {qtype[anstype]} 은 뭐냐 시벌아? ")
-    getans = str(input())
-
-    if getans == "stop":
-        exit()
-    
-    if getans == spring_const[r][anstype]:
-        print("맞다", end = "\n\n")
-
-    else:
-        print("이게 국가에 이바지...?")
-        print(f"정답은 {spring_const[r][anstype]}다 국대 병신새끼야", end = "\n\n")
-'''
