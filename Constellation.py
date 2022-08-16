@@ -77,19 +77,19 @@ class Thread1(QThread):
             self.qtxt_signal.emit(qtext)
 
             while not jechul:
-                time.sleep(1)
+                time.sleep(0.5)
 
             jechul = False
 
             if jechulgap == uselist[r][anstype]:
                 self.anstxt_signal.emit("맞습니다.")
-                time.sleep(1)
+                time.sleep(0.5)
 
             else:
                 self.anstxt_signal.emit(f"틀렸습니다. 정답은 {uselist[r][anstype]} 입니다.")
                 
                 while not daum:
-                    time.sleep(1)
+                    time.sleep(0.5)
 
                 daum = False
 
