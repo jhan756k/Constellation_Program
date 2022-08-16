@@ -1,8 +1,12 @@
 Constellation Memorization Program
 ==
-**실행방법**
+실행방법
+===
 
-Constellation.exe 파일 하나만 다운로드 후 실행
+Constellation App.exe 파일 하나만 다운로드 후 실행
+만약 바이러스 어쩌구 때문에 안되면 그냥 Constellation.py, Constellation.xlsx 두개만 다운받고 
+Constellation.py 실행 (파이썬, pyqt5, openpyxl 다운로드 필요)
+
 
 사용방법
 ===
